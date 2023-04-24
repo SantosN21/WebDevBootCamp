@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&family=Roboto:wght@400;700&display=swap");
+:root {
+  --bg-color: #EAF6F6;
+  --typewriterSpeed: 3s;
+  --typewriterCharacters: 25;
+}
+
+.top-container {
+  text-align: center;
+  background-color: #EAF6F6;
+  color: #66BFBF;
+  position: relative;
+  padding-top: 100px;
+}
+.animated-text-container {
+  min-height: 44vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  background: var(--bg-color);
+}
+h1 {
+  font-family: "Nunito", sans-serif;
+  color: #66BFBF;
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  width: max-content;
+}
+h2 {
+    color: #66BFBF;
+}
+h3 {
+   color: #11999E;
+}
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+h1::before {
+  background: var(--bg-color);
+  animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+h1::after {
+  width: 0.125em;
+  background: #66BFBF;
+  animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+.subtitle {
+  color: #66BFBF;
+  font-size: 2rem;
+  font-weight: 400;
+  opacity: 0;
+  transform: translateY(3rem);
+  animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+}
+
+body {
+  margin: 0;
+}
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+.middle-container {
+  padding-top: 30px;
+  text-align: center;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  color: #000000;
+  padding-bottom: 30px;
+}
+.top-cloud {
+  display: block;
+  position: absolute;
+  right: 300px;
+  top: 50px;
+  height: 70px;
+}
+.bottom-cloud {
+  display: block;
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+  height: 70px;
+  padding-bottom: 50px;
+}
+.mountain {
+  padding-top: 90px;
+}
+.profile-picture {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+}
+hr {
+  border-style: dotted none none;
+  border-width: 5px;
+  border-color: #a2b3b3;
+  width: 2%;
+}
+.bottom-container {
+  text-align: center;
+  background-color: #66BFBF;
+  padding-top: 20px;
+  font-family: "Nunito", sans-serif;
+}
+.copyright-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fcfcfc;
+}
+.chillies {
+  margin-right: 30px;
+  width: 25%;
+  float: left;
+}
+.code {
+  margin-left: 30px;
+  width: 25%;
+  float: right;
+}
+.footer-link {
+  color: #11999E;
+}
+.btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #11cdd4;
+    width: 140px;
+    margin: auto;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+
+.skill-row {
+  margin: 150px auto 150px auto;
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
